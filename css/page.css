@@ -1,12 +1,7 @@
+/* Sub-page styling */
 .page{
     width: 100%;
     min-height: 100vh;
-}
-h2{
-    width: 100%;
-    text-align: center;
-    padding: 0.5cm 0;
-    font-size: 2em;
 }
 #jpg{
     background-color: salmon;
@@ -16,4 +11,24 @@ h2{
 }
 #webp{
     background-color: seagreen;
+}
+/* Heading styling */
+h2{
+    width: 100%;
+    text-align: center;
+    padding: 0.5cm 0;
+    font-size: 2em;
+}
+/* image styling */
+.imageGroup{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    gap: 1cm;
+    margin: auto;
+    padding-bottom: 1cm;
+}
+.imageGroup img{
+    max-width: 100%;
+    height: auto;
 }
