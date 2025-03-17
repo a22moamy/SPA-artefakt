@@ -7,6 +7,26 @@
     <link rel="stylesheet" href="css/page.css">
 </head>
 <body>
+
+    <!-- PHP CODE -->
+    <?php
+        /*  Function that iterates through all files in a directory. 
+        For every file it creates an <img> element for that specific image.
+        A folder within /images/ is selected by passing a string parameter of the folder name.
+        */
+        function createImages($type){
+            // Scans the "images" directory
+            $images = scandir('./images/'.$type);
+            // Loops through images (files) to create elements
+            foreach($images as $image) {
+                // Creates <img> elements with the corresponding paths. 
+                // Also implements lazy loading in order for images only to load when within frame / needed. 
+                echo "<img loading='lazy' src='images/".$type."/$image'>";
+            }
+        }
+    ?>
+    <!-- PHP END -->
+     
     <nav>
         <button>
             <!-- Calls showPage() when clicked to switch sub-page -->
@@ -21,15 +41,30 @@
     </nav>
     <div id="jpg" class="page">
         <h2>JPG Image gallery</h2>
-        <div class="imageGroup"></div>
+        <div class="imageGroup">
+            <?php 
+                // Implements images from the "JPEG" folder
+                createImages("JPEG");
+            ?>
+        </div>
     </div>
     <div id="png" class="page">
         <h2>PNG Image gallery</h2>
-        <div class="imageGroup"></div>
+        <div class="imageGroup">
+            <?php 
+                // Implements images from the "PNG" folder
+                createImages("PNG");
+            ?>
+        </div>
     </div>
     <div id="webp" class="page">
         <h2>WEBP Image gallery</h2>
-        <div class="imageGroup"></div>
+        <div class="imageGroup">
+            <?php 
+                // Implements images from the "WEBP" folder
+                createImages("WEBP");
+            ?>
+        </div>
     </div>
 </body>
     <script src="scripts/SPA.js"></script>
