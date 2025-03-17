@@ -6,6 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Testing</h1>
+    <nav>
+        <button>
+            <a href="">JPG</a>
+        </button>
+        <button>
+            <a href="">PNG</a>
+        </button>
+        <button>
+            <a href="">WEBP</a>
+        </button>
+    </nav>
 </body>
 </html>
