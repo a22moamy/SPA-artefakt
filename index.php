@@ -9,13 +9,14 @@
 <body>
     <nav>
         <button>
-            <a href="">JPG</a>
+            <!-- Calls showPage() when clicked to switch sub-page -->
+            <a onclick="showPage(pages[0]);">JPG</a>
         </button>
         <button>
-            <a href="">PNG</a>
+            <a onclick="showPage(pages[1]);">PNG</a>
         </button>
         <button>
-            <a href="">WEBP</a>
+            <a onclick="showPage(pages[2]);">WEBP</a>
         </button>
     </nav>
     <div id="jpg" class="page">
@@ -31,4 +32,5 @@
         <div class="imageGroup"></div>
     </div>
 </body>
+    <script src="scripts/SPA.js"></script>
 </html>
