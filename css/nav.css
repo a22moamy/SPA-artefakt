@@ -1,0 +1,20 @@
+/* Styling for navigation bar */
+nav{
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0.5cm 0;
+    display: flex;
+    justify-content: center;
+}
+nav button{
+    margin: 0 15px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.406);
+    border: none;
+    border-radius: 2px;
+}
+nav button a{
+    color: white; 
+    text-decoration: none;
+}
