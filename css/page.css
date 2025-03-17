@@ -1,0 +1,19 @@
+.page{
+    width: 100%;
+    min-height: 100vh;
+}
+h2{
+    width: 100%;
+    text-align: center;
+    padding: 0.5cm 0;
+    font-size: 2em;
+}
+#jpg{
+    background-color: salmon;
+}
+#png{
+    background-color: slateblue;
+}
+#webp{
+    background-color: seagreen;
+}
