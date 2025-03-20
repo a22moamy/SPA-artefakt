@@ -32,13 +32,13 @@
     <nav>
         <button>
             <!-- Calls showPage() when clicked to switch sub-page -->
-            <a onclick="showPage(pages[0]);">JPG</a>
+            <a href="?type=JPG" onclick="showPage();">JPG</a>
         </button>
         <button>
-            <a onclick="showPage(pages[1]);">PNG</a>
+            <a href="?type=PNG" onclick="showPage();">PNG</a>
         </button>
         <button>
-            <a onclick="showPage(pages[2]);">WEBP</a>
+            <a href="?type=WEBP" onclick="showPage();">WEBP</a>
         </button>
     </nav>
     <div id="jpg" class="page">
