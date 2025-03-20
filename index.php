@@ -23,7 +23,9 @@
             foreach($images as $image) {
                 // Creates <img> elements with the corresponding paths. 
                 // Also implements lazy loading in order for images only to load when within frame / needed. 
-                echo "<img loading='lazy' src='images/".$type."/$image'>";
+                if($image   != ".." && $image != "."){
+                    echo "<img loading='lazy' src='images/".$type."/$image'>";
+                }
             }
         }
     ?>
