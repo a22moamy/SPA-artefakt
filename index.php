@@ -19,10 +19,11 @@
         function createImages($type){
             // Scans the "images" directory
             $images = scandir('./images/'.$type);
-            // Loops through images (files) to create elements
+            // Loops through images to create elements
             foreach($images as $image) {
                 // Creates <img> elements with the corresponding paths. 
                 // Also implements lazy loading in order for images only to load when within frame / needed. 
+                // If statement avoids directories getting their own <img>-elements.
                 if($image   != ".." && $image != "."){
                     echo "<img loading='lazy' src='images/".$type."/$image'>";
                 }
