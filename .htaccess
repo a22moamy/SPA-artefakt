@@ -1,7 +1,5 @@
 <IfModule mod_headers.c>
-	header ("Pragma-directive: no-cache");
-	header ("Cache-directive: no-cache");
-	header ("Cache-control: no-cache");
-	header ("Pragma: no-cache");
-	header ("Expires: 0");
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+    Header set Expires 0
 </IfModule>
