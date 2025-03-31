@@ -22,10 +22,9 @@
             // Loops through images to create elements
             foreach($images as $image) {
                 // Creates <img> elements with the corresponding paths. 
-                // Also implements lazy loading in order for images only to load when within frame / needed. 
                 // If statement avoids directories getting their own <img>-elements.
                 if($image   != ".." && $image != "."){
-                    echo "<img loading='lazy' src='images/".$type."/$image'>";
+                    echo "<img src='images/".$type."/$image'>";
                 }
             }
         }
@@ -48,8 +47,12 @@
         <h2>JPG Image gallery</h2>
         <div class="imageGroup">
             <?php 
-                // Implements images from the "JPEG" folder
-                createImages("JPEG");
+                // Only implement images if the URL is correct (includes the image format as part of the URL)
+                // Since the correct URL indicates we are on the correct sub-page
+                if (isset($_GET['type']) && $_GET['type'] === 'JPG') {
+                    // Implements images from the "JPEG" folder
+                    createImages("JPEG");
+                }
             ?>
         </div>
     </div>
@@ -57,8 +60,11 @@
         <h2>PNG Image gallery</h2>
         <div class="imageGroup">
             <?php 
-                // Implements images from the "PNG" folder
-                createImages("PNG");
+                // Only implement images if the URL is correct (includes the image format as part of the URL)
+                if (isset($_GET['type']) && $_GET['type'] === 'PNG') {
+                    // Implements images from the "PNG" folder
+                    createImages("PNG");
+                }
             ?>
         </div>
     </div>
@@ -66,8 +72,11 @@
         <h2>WEBP Image gallery</h2>
         <div class="imageGroup">
             <?php 
-                // Implements images from the "WEBP" folder
-                createImages("WEBP");
+                // Only implement images if the URL is correct (includes the image format as part of the URL)
+                if (isset($_GET['type']) && $_GET['type'] === 'WEBP') {
+                    // Implements images from the "JPEG" folder
+                    createImages("WEBP");
+                }
             ?>
         </div>
     </div>
