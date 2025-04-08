@@ -24,7 +24,7 @@
                 // Creates <img> elements with the corresponding paths. 
                 // If statement avoids directories getting their own <img>-elements.
                 if($image   != ".." && $image != "."){
-                    echo "<img src='images/".$type."/$image'>";
+                    echo "<img src='images/{$type}/{$image}?id=".uniqid()."'>";
                 }
             }
         }
