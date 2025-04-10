@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="css/page.css">
 </head>
 <body>
-
-    <!-- PHP CODE -->
     <?php
         /*  Function that iterates through all files in a directory. 
         For every file it creates an <img> element for that specific image.
@@ -29,8 +27,6 @@
             }
         }
     ?>
-    <!-- PHP END -->
-     
     <nav>
         <button>
             <!-- Calls showPage() when clicked to switch sub-page -->
@@ -43,8 +39,13 @@
             <a href="?type=WEBP" onclick="showPage();">WEBP</a>
         </button>
     </nav>
+    <!-- Displays a heading describing the currently active sub-page. -->
+    <?php 
+        if(isset($_GET['type'])){
+            echo "<h1 class='{$_GET['type']}'>{$_GET['type']} Image gallery</h1>";
+        }
+    ?>
     <div id="jpg" class="page">
-        <h2>JPG Image gallery</h2>
         <div class="imageGroup">
             <?php 
                 // Only implement images if the URL is correct (includes the image format as part of the URL)
@@ -57,7 +58,6 @@
         </div>
     </div>
     <div id="png" class="page">
-        <h2>PNG Image gallery</h2>
         <div class="imageGroup">
             <?php 
                 // Only implement images if the URL is correct (includes the image format as part of the URL)
@@ -69,7 +69,6 @@
         </div>
     </div>
     <div id="webp" class="page">
-        <h2>WEBP Image gallery</h2>
         <div class="imageGroup">
             <?php 
                 // Only implement images if the URL is correct (includes the image format as part of the URL)
