@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/page.css">
-    <script src="https://unpkg.com/vue@3"></script>
 </head>
-<body  id="app">
+<body>
     <?php
         /*  Function that iterates through all files in a directory. 
         For every file it creates an <img> element for that specific image.
@@ -28,17 +27,6 @@
             }
         }
     ?>
-    <script>
-        const { createApp, ref } = Vue
-        createApp({
-            setup() {
-            const message = ref('Hello vue!')
-            return {
-                message
-            }
-            }
-        }).mount('#app')
-    </script>
     <nav>
         <button>
             <!-- Calls showPage() when clicked to switch sub-page -->
